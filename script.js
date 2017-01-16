@@ -208,6 +208,28 @@ function createSlider(parameterName) {
             endLocalEditParameter(parameterName, value);
         }
     });
+    sliderElement.addEventListener("touchstart", function(e) {
+        param.isDrag = true;
+    });
+
+    sliderElement.addEventListener("touchend", function(e) {
+        param.isDrag = false;
+        if (param.isEdit) {
+            var value = fromNormalizedParameterValue(param.sliderElement.value / 100, paramDef);
+            endLocalEditParameter(parameterName, value);
+        }
+    });
+
+    sliderElement.addEventListener("touchcancel", function(e) {
+        param.isDrag = false;
+        if (param.isEdit) {
+            var value = fromNormalizedParameterValue(param.sliderElement.value / 100, paramDef);
+            endLocalEditParameter(parameterName, value);
+        }
+    });
+
+//    sliderElement.addEventListener("touchmove", this.touchMove.bind(this), false);
+
     sliderElement.addEventListener("input", function(e) {
         var value = fromNormalizedParameterValue(param.sliderElement.value / 100, paramDef);
         if (!param.isDrag) {
