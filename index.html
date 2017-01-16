@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>nano morphs</title>
+</head>
+
+<body>
+
+<div style="white-space:nowrap;">
+<div>
+<span style="display:inline-block;width:0;height:0;z-index:20;position:relative;opacity:0.8;"><span style="float:left;position:relative;left:0px;top:-300px;font-size:80px;">n<span style="position:relative;left:0px;top:0px;" id="brand-left">a</span>no</span></span>
+<span style="display:inline-block;width:0;height:0;z-index:20;position:relative;opacity:0.8;"><span style="float:left;position:relative;left:0px;top:-125px;font-size:130px;">sh<span style="position:relative;left:0px;top:0px;" id="brand-right">a</span>re</span></span>
+<canvas style="background:white;padding-top:100px;" id="osc" width="500" height="250"></canvas>
+<div style="display:inline-block;text-align:left;width:150px;">
+<span id="muteButton" style="display:inline-block;width:24px;height:24px">
+<img src="images/ic_volume_off_black_24dp_2x.png" id="muteButtonIcon" style="width:100%;height:100%;">
+<img src="images/ic_volume_up_black_24dp_2x.png" id="unmuteButtonIcon" style="width:100%;height:100%;display:none;">
+</span>
+<br>
+<span class="debug"><span>buffer:</span><span id="streamBufferLength"></span></span>
+</span>
+</div>
+
+
+<div style="padding-top:30px;">
+<table id="paramContainer" border="0" padding="0" cell-padding="0"></table>
+</div>
+
+
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.6.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.6.2/firebase-database.js"></script>
+<script src="engine.js"></script>
+<script src="resampler.js"></script>
+<script src="script.js"></script>
+
+
+</body>
+</html>
+
+
